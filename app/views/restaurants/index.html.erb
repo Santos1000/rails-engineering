@@ -1,8 +1,17 @@
+<div class='banner' style="background-image: url('images/background.jpg')";>
+  <div class = 'container'>
+    <h1>All Restaurants<h1>
+    <p>select a new restaurant</p>
+    <div class='btn-green'>
+      <%= link_to 'Create restaurant', new_restaurant_path(@restaurant)%>
+    </div>
+  </div>
+</div>
 
-<h1>All Restaurants<h1>
-
-<ul>
-  <% @restaurants.each do |restaurant| %>
-    <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
-  <% end %>
-</ul>
+<div class = 'container'>
+  <ul>
+    <% @restaurants.each do |restaurant| %>
+      <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+    <% end %>
+  </ul>
+</div>

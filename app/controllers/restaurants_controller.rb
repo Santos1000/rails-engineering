@@ -5,7 +5,6 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-
   end
 
   def new
@@ -15,11 +14,10 @@ class RestaurantsController < ApplicationController
   def create
     restaurant = Restaurant.new(restaurant_params)
     restaurant.save
-    redirect_to restaurant_path(@restaurant)
+    redirect_to restaurants_path(@restaurant)
   end
 
   def edit
-
   end
 
   def update
