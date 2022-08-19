@@ -1,13 +1,32 @@
-<h1>Restaurant <%= @restaurant.name %></h1>
 
-<p>Address: <%=@restaurant.address %></p>
-<p>Rating: <%= @restaurant.rating %></p>
+<div class='border-bottom'>
+  <div class='d-flex justify-content-between align-items-center container my-3'>
+    <%= image_tag 'logo.jpg', style: 'width:50px'%>
+    <a href="#" class='btn btn-primary'>Login</a>
+  </div>
+</div>
 
-<%= link_to 'back to all restaurants', restaurants_path %>
+<div class='container'>
+  <%= image_tag 'bobs.png', class:"w-100 my-4 rounded"%>
 
-<%= link_to 'Delete',
-  restaurant_path(@restaurant),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%>
+  <h1>Restaurant <%= @restaurant.name %></h1>
 
-<%= link_to 'Edit restaurant', edit_restaurant_path(@restaurant)%>
+  <p>Address: <%=@restaurant.address %></p>
+  <p>Rating: <%= @restaurant.rating %></p>
+
+
+  <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore deserunt ratione obcaecati nisi laboriosam temporibus officia illo voluptas vero corporis nulla ea harum magnam, alias quia beatae consequatur. Aliquam, repellendus?</p>
+
+
+  <%= link_to 'Back to all Restaurants', restaurants_path, class:'btn btn-primary my-5' %>
+
+
+  <%= link_to 'Delete',
+    restaurant_path(@restaurant), class:'btn btn-primary my-5',
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %>
+
+
+  <%= link_to 'Edit Restaurant', edit_restaurant_path(@restaurant), class:'btn btn-primary my-5'%>
+
+</div>

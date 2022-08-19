@@ -1,3 +1,6 @@
-<h1>Edit <%= @restaurant.name %></h1>
-
-<%= render 'form', restaurant: @restaurant %>
+<div class='container text-center my-4'>
+  <h1>Edit <%= @restaurant.name %></h1>
+  <div calss='border rounded p-4'>
+    <%= render 'form', restaurant: @restaurant %>
+  </div>
+</div>

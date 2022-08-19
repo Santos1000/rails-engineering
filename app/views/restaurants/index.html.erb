@@ -1,19 +1,24 @@
-<div class='banner' style="background-image: url('images/background.jpg')";>
-  <div class = 'container'>
-    <h1>All Restaurants<h1>
-    <p>select a new restaurant</p>
-    <div class='btn-green'>
-      <%= link_to 'Create restaurant', new_restaurant_path(@restaurant)%>
+<div class="banner" style="background-image: url('images/bobs.png')";>
+  <div class = "container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-6 text-center">
+        <h1>All Restaurants<h1>
+        <h2>select a new restaurant</h2>
+
+        <%= link_to "Create restaurant", new_restaurant_path(@restaurant), class:"btn btn-primary my-5"%>
+      </div>
     </div>
   </div>
 </div>
 
-<div class = 'container'>
-  <ul>
-    <% @restaurants.each do |restaurant| %>
-      <div class='card-category'>
-        <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-6 text-center">
+      <div class="cards">
+          <% @restaurants.each do |restaurant| %>
+            <%= link_to restaurant.name, restaurant_path(restaurant), class:"list-group-item list-group-item-action"%>
+          <% end %>
       </div>
-    <% end %>
-  </ul>
+    </div>
+  </div>
 </div>
